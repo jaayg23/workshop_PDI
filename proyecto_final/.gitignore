@@ -1,0 +1,17 @@
+# Ignorar las imagenes del dataset test
+proyecto_PDI.v8i.yolov8/test/images
+proyecto_PDI.v8i.yolov8/test/labels
+
+# Ignorar las imagenes del dataset train
+proyecto_PDI.v8i.yolov8/train/images
+proyecto_PDI.v8i.yolov8/train/labels
+
+# Ignorar las imagenes del dataset valid
+proyecto_PDI.v8i.yolov8/valid/images
+proyecto_PDI.v8i.yolov8/valid/labels
+
+# Ignorar archivos de datos de NumPy
+*.npy
+
+# Ignorar archivos de caché
+*.cache
