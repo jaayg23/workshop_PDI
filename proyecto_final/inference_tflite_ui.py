@@ -100,7 +100,19 @@ def run_inference(image_path, conf_threshold=0.2, nms_threshold=0.4):
             class_counts[cls_id] = class_counts.get(cls_id, 0) + 1
 
     # (El código para guardar en .txt y el resto de la función puede permanecer igual o adaptarse si es necesario)
-    
+
+     # 1. Definir el nombre del archivo de salida (ej: "mi_foto_predicted.jpg")
+        output_filename = image_path.rsplit('.', 1)[0] + '_predicted.jpg'
+
+        # 2. Convertir la imagen de RGB (usada para mostrar) a BGR (usada por OpenCV para guardar)
+        img_to_save = cv2.cvtColor(img_copy, cv2.COLOR_RGB2BGR)
+
+        # 3. Guardar la imagen en el disco
+        cv2.imwrite(output_filename, img_to_save)
+        print(f"Imagen con predicciones guardada en: {output_filename}")
+
+        # --- FIN DEL CÓDIGO AÑADIDO ---
+
     return img_rgb, img_copy, class_counts, inference_time
 
 
